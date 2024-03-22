@@ -1,28 +1,167 @@
 * {
-    margin: 0;
-    padding: 0;
-    -webkit-tap-highlight-color: transparent;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
 }
-
 
 :root {
-    --nutmeg: hsl(14, 45%, 36%);
-    --dark-raspberry: hsl(332, 51%, 32%);
-    --white: hsl(0, 0%, 100%);
-    --rose-white: hsl(330, 100%, 98%);
-    --eggshell: hsl(30, 54%, 90%);
-    --light-grey: hsl(30, 18%, 87%);
-    --wenge-brown: hsl(30, 10%, 34%);
-    --dark-charcoal: hsl(24, 5%, 18%);
+	--nutmeg: hsl(14, 45%, 36%);
+	--dark-raspberry: hsl(332, 51%, 32%);
+	--white: hsl(0, 0%, 100%);
+	--rose-white: hsl(330, 100%, 98%);
+	--eggshell: hsl(30, 54%, 90%);
+	--light-grey: hsl(30, 18%, 87%);
+	--wenge-brown: hsl(30, 10%, 34%);
+	--dark-charcoal: hsl(24, 5%, 18%);
 }
-
-
 
 body {
-    background-color: var(--eggshell);
-    padding: 123px 0;
-    display: grid;
-    place-items: center;
+	background-color: var(--eggshell);
+	padding: 123px 0;
+	display: grid;
+	place-items: center;
 }
 
+.main-container {
+	max-width: 46rem;
+	background-color: var(--white);
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+	border-radius: 24px;
+}
+
+.main-container__image {
+	min-width: calc(100% - 80px);
+	border-radius: 12px;
+}
+
+.main-container__title {
+	font-family: 'Young Serif', serif;
+	font-weight: 400;
+	font-size: 40px;
+	color: var(--dark-charcoal);
+	margin-top: 40px;
+}
+
+.main-container__text {
+	font-family: 'Outfit';
+	color: var(--wenge-brown);
+	line-height: 150%;
+	font-weight: 400;
+}
+
+.main-container__preparation-time-section {
+    height: max-content;
+    width: 100%;
+    background-color: var(--rose-white);
+    border-radius: 12px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+	margin: 2rem 0;
+}
+
+.main-container__preparation-time-section__title {
+	font-family: 'Outfit';
+	color: var(--dark-raspberry);
+}
+
+.main-container__preparation-time-section__list {
+	list-style-position: inside;
+}
+
+
+.main-container__preparation-time-section__list__list-item {
+	font-family: 'Outfit';
+	margin-bottom: .5rem;
+}
+
+
+.main-container__ingredients-section {
+	
+}
+
+.main-container__ingredients-section__title {
+	font-family: 'Young Serif', serif;
+	font-size: 28px;
+	color: var(--nutmeg);
+	font-weight: 100;
+	margin-bottom: 24px;
+}
+
+.main-container__ingredients-list {
+	list-style-position: inside;
+}
+
+.divider {
+	width: 100%;
+	height: 1px;
+	background-color: #E3DDD7;
+	margin: 2rem 0;
+}
+
+.main-container__ingredients-list__list-item {
+	font-family: 'Outfit';
+	color: var(--wenge-brown);
+	margin-bottom: .5rem;
+}
+
+.main-container__ingredients-list__list-item::marker {
+	color: var(--nutmeg);
+}
+
+
+
+.main-container__sub-title {
+	font-family: 'Young Serif', serif;
+	font-size: 28px;
+	color: var(--nutmeg);
+	font-weight: 100;
+	margin-bottom: 24px;
+}
+
+.main-container__instructions-list {
+	list-style-position: inside;
+}
+
+.main-container__instructions-list__list-item {
+	font-family: 'Outfit';
+	color: var(--wenge-brown);
+	margin-bottom: .5rem;
+}
+
+.main-container__instructions-list__list-item::marker {
+	color: var(--nutmeg);
+}
+
+.main-container__nutrition {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: .6rem;
+	margin-top: 24px;
+}
+
+
+.main-container__nutrition__row {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px #E3DDD7 solid;
+	display: grid;
+	grid-template-columns: 288px 288px;
+	align-items: center;
+	padding-left: 32px;
+
+}
+
+.main-container__nutrition__row:last-child {
+	border-bottom: unset;
+}
+
+.main-container__nutrition__row > h4 {
+	font-family: 'Outfit';
+	color: var(--nutmeg);
+}
